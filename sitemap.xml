@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2022/08/17/Biostatistics%20using%20R/</loc>
+    
+    <lastmod>2022-08-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2022/08/13/Creative%20Cross-disciplinary%20Master's%20Student%20Seeking%20Ph.D.%20Position/</loc>
     
     <lastmod>2022-08-17</lastmod>

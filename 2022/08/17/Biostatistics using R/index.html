@@ -20,17 +20,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="We all have our places in the world.">
-<meta property="og:type" content="website">
+  <meta name="description" content="Since there are biostatistics classes in this semester, which mainly rely on R language to complete, I tried to use R language to complete the example questions in each chapter of the bibliography on">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2022/index.html">
+<meta property="og:url" content="http://example.com/2022/08/17/Biostatistics%20using%20R/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="We all have our places in the world.">
+<meta property="og:description" content="Since there are biostatistics classes in this semester, which mainly rely on R language to complete, I tried to use R language to complete the example questions in each chapter of the bibliography on">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/.%5Cimages%5CBR_4_2_1.png">
+<meta property="article:published_time" content="2022-08-17T13:08:54.508Z">
+<meta property="article:modified_time" content="2022-08-17T14:29:34.178Z">
 <meta property="article:author" content="Zhang Zehong">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/.%5Cimages%5CBR_4_2_1.png">
 
-<link rel="canonical" href="http://example.com/archives/2022/">
+<link rel="canonical" href="http://example.com/2022/08/17/Biostatistics%20using%20R/">
 
 
 <script id="page-configurations">
@@ -38,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Archive | Hexo</title>
+  <title> | Hexo</title>
   
 
 
@@ -157,70 +161,125 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 2 posts in total. Keep on posting.</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/17/Biostatistics%20using%20R/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/zhangzh_orange.jpg">
+      <meta itemprop="name" content="Zhang Zehong">
+      <meta itemprop="description" content="We all have our places in the world.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-08-17 21:08:54 / Modified: 22:29:34" itemprop="dateCreated datePublished" datetime="2022-08-17T21:08:54+08:00">2022-08-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+        <blockquote>
+<p>Since there are biostatistics classes in this semester, which mainly rely on R language to complete, I tried to use R language to complete the example questions in each chapter of the bibliography one by one, and sorted out the R language related homework and answers. The bibliography is the fifth edition of Biostatistics edited by Chunxi Li, and the completed code is shared here.</p>
+</blockquote>
+<h1 id="Chapter-4-Statistical-inference"><a href="#Chapter-4-Statistical-inference" class="headerlink" title="Chapter 4 Statistical inference"></a>Chapter 4 Statistical inference</h1><p>Statistical inference is <strong>a method of making decisions about the parameters of a population, based on random sampling</strong>.</p>
+<h2 id="4-1-Hypothesis-testing"><a href="#4-1-Hypothesis-testing" class="headerlink" title="4.1 Hypothesis testing"></a>4.1 Hypothesis testing</h2><p><strong>4 steps of hypothesis testing:</strong></p>
+<ol>
+<li><p>State the hypotheses (null hypothesis H<sub>0</sub> and alternative hypothesis H<sub>A</sub>). </p>
+</li>
+<li><p>Deciding significance level and test method  (often choose significance levels &#x3D; 0.01 or 0.05).</p>
+</li>
+<li><p>Calculating test statistic and P-value. </p>
+<blockquote>
+<p>The P-value is <strong>the probability</strong> of observing a sample statistic as extreme as the test statistic, assuming <strong>the null hypothesis is true</strong>.</p>
+</blockquote>
+</li>
+<li><p>Whether to reject the null hypothesis.</p>
+</li>
+</ol>
+<h2 id="4-2-Two-Tailed-vs-One-Tailed-Test"><a href="#4-2-Two-Tailed-vs-One-Tailed-Test" class="headerlink" title="4.2 Two-Tailed vs. One-Tailed Test"></a>4.2 Two-Tailed vs. One-Tailed Test</h2><p><strong>Two-tailed test:</strong></p>
+<ol>
+<li>critical area of a distribution is two-sided</li>
+<li>whether a sample is greater than or less than a certain range of values</li>
+</ol>
+<p><img src="/.%5Cimages%5CBR_4_2_1.png" alt="BR_4_2_1"></p>
+<p><strong>One-tailed test:</strong></p>
+<ol>
+<li>critical area of a distribution is one-sided</li>
+<li>either greater than or less than a certain value, but not both</li>
+</ol>
+<p>According to the testing requirements and professional knowledge, using one-tailed test as far as possible to improve the sensitivity of hypothesis testing.</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
+        
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-08-17T21:08:54+08:00"
-              content="2022-08-17">
-          08-17
-        </time>
-      </div>
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/08/17/Biostatistics%20using%20R/" itemprop="url">
-            <span itemprop="name">Untitled</span>
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
           </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-08-13T18:39:05+08:00"
-              content="2022-08-13">
-          08-13
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/08/13/Creative%20Cross-disciplinary%20Master's%20Student%20Seeking%20Ph.D.%20Position/" itemprop="url">
-            <span itemprop="name">Creative Cross-disciplinary Master's Student Seeking Ph.D. Position</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-
+        </div>
     </div>
   </div>
-  
-  
-  
 
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/08/13/Creative%20Cross-disciplinary%20Master's%20Student%20Seeking%20Ph.D.%20Position/" rel="prev" title="Creative Cross-disciplinary Master's Student Seeking Ph.D. Position">
+      <i class="fa fa-chevron-left"></i> Creative Cross-disciplinary Master's Student Seeking Ph.D. Position
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
@@ -273,6 +332,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-4-Statistical-inference"><span class="nav-number">1.</span> <span class="nav-text">Chapter 4 Statistical inference</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Hypothesis-testing"><span class="nav-number">1.1.</span> <span class="nav-text">4.1 Hypothesis testing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-Two-Tailed-vs-One-Tailed-Test"><span class="nav-number">1.2.</span> <span class="nav-text">4.2 Two-Tailed vs. One-Tailed Test</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

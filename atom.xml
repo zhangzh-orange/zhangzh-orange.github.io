@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-17T11:51:15.604Z</updated>
+  <updated>2022-08-17T14:29:34.178Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2022/08/17/Biostatistics%20using%20R/"/>
+    <id>http://example.com/2022/08/17/Biostatistics%20using%20R/</id>
+    <published>2022-08-17T13:08:54.508Z</published>
+    <updated>2022-08-17T14:29:34.178Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Since there are biostatistics classes in this semester, which mainly rely on R language to complete, I tried to use R language to complete the example questions in each chapter of the bibliography one by one, and sorted out the R language related homework and answers. The bibliography is the fifth edition of Biostatistics edited by Chunxi Li, and the completed code is shared here.</p></blockquote><h1 id="Chapter-4-Statistical-inference"><a href="#Chapter-4-Statistical-inference" class="headerlink" title="Chapter 4 Statistical inference"></a>Chapter 4 Statistical inference</h1><p>Statistical inference is <strong>a method of making decisions about the parameters of a population, based on random sampling</strong>.</p><h2 id="4-1-Hypothesis-testing"><a href="#4-1-Hypothesis-testing" class="headerlink" title="4.1 Hypothesis testing"></a>4.1 Hypothesis testing</h2><p><strong>4 steps of hypothesis testing:</strong></p><ol><li><p>State the hypotheses (null hypothesis H<sub>0</sub> and alternative hypothesis H<sub>A</sub>). </p></li><li><p>Deciding significance level and test method  (often choose significance levels &#x3D; 0.01 or 0.05).</p></li><li><p>Calculating test statistic and P-value. </p><blockquote><p>The P-value is <strong>the probability</strong> of observing a sample statistic as extreme as the test statistic, assuming <strong>the null hypothesis is true</strong>.</p></blockquote></li><li><p>Whether to reject the null hypothesis.</p></li></ol><h2 id="4-2-Two-Tailed-vs-One-Tailed-Test"><a href="#4-2-Two-Tailed-vs-One-Tailed-Test" class="headerlink" title="4.2 Two-Tailed vs. One-Tailed Test"></a>4.2 Two-Tailed vs. One-Tailed Test</h2><p><strong>Two-tailed test:</strong></p><ol><li>critical area of a distribution is two-sided</li><li>whether a sample is greater than or less than a certain range of values</li></ol><p><img src="/.%5Cimages%5CBR_4_2_1.png" alt="BR_4_2_1"></p><p><strong>One-tailed test:</strong></p><ol><li>critical area of a distribution is one-sided</li><li>either greater than or less than a certain value, but not both</li></ol><p>According to the testing requirements and professional knowledge, using one-tailed test as far as possible to improve the sensitivity of hypothesis testing.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Since there are biostatistics classes in this semester, which mainly rely on R language to complete, I tried to use R langua</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Creative Cross-disciplinary Master&#39;s Student Seeking Ph.D. Position</title>
