@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://example.com/images/BR/BR_4_1_2.png">
 <meta property="og:image" content="http://example.com/images/BR/BR_4_2_1.png">
 <meta property="article:published_time" content="2022-08-13T10:39:05.000Z">
-<meta property="article:modified_time" content="2022-08-18T01:23:00.303Z">
+<meta property="article:modified_time" content="2022-08-18T02:21:19.997Z">
 <meta property="article:author" content="Zhang Zehong">
 <meta property="article:tag" content="Reading notes">
 <meta name="twitter:card" content="summary">
@@ -196,7 +196,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-08-18 09:23:00" itemprop="dateModified" datetime="2022-08-18T09:23:00+08:00">2022-08-18</time>
+                <time title="Modified: 2022-08-18 10:21:19" itemprop="dateModified" datetime="2022-08-18T10:21:19+08:00">2022-08-18</time>
               </span>
 
           
@@ -298,6 +298,26 @@
 <li><strong>The population variance σ<sup>2</sup> is unknown</strong></li>
 </ol>
 <p>When the population variance σ<sup>2</sup> is unknown, as long as <strong>the sample size is n &gt;&#x3D; 30</strong>. According to the <strong><a target="_blank" rel="noopener" href="https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_probability/BS704_Probability12.html">central limit theorem</a></strong>, the distribution of sample means approximately normal distribution. Therefore, the sample variance s<sup>2</sup> can be used to estimate the population variance σ<sup>2</sup>, and the <strong>u test method</strong> is still used.</p>
+<blockquote>
+<p>Example:</p>
+<p>For the production of certain textiles, the average length of the cotton fibers needs to be more than 30mm. The average length and standard deviation of a cotton variety with n&#x3D;400 were 30.2mm and 2.5mm, respectively. Is the fiber length of the cotton variety sufficient to produce textile production?</p>
+</blockquote>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-2-Hypothesis-test-for-difference-between-two-means"><a href="#4-2-2-Hypothesis-test-for-difference-between-two-means" class="headerlink" title="4.2.2 Hypothesis test for difference between two means"></a>4.2.2 Hypothesis test for difference between two means</h3><ol>
+<li><strong>The population variances σ<sub>1</sub><sup>2</sup> and σ<sub>2</sub><sup>2</sup> are known</strong></li>
+</ol>
+<p>When the <strong>population variances σ<sub>1</sub><sup>2</sup> and σ<sub>2</sub><sup>2</sup> are known</strong>, no matter whether the sample is large (n&gt;&#x3D;30) or small (n&lt;30), <strong>the distributions of sample means follow the normal distribution</strong>. The u-test method was used to test the hypothesis.</p>
+<ol start="2">
+<li><strong>The population variances σ<sub>1</sub><sup>2</sup> and σ<sub>2</sub><sup>2</sup> are unknown</strong></li>
+</ol>
+<p><strong>n1&gt;&#x3D;30 and n2&gt;&#x3D;30, using u test (or z test).</strong></p>
+<blockquote>
+<p>Example:</p>
+<p>55 strains and 107 strains of the two rubber varieties were randomly sampled for cutting, the average yield of cutting was 95.4 mL&#x2F; plant and 77.6 mL&#x2F; plant, and the variance of cutting yield was 936.36 (mL&#x2F; plant)<sup>2</sup> and 800.89 (mL&#x2F; plant)<sup>2</sup>, respectively. To test whether there is a significant difference in cutting yield between the two rubber varieties.</p>
+</blockquote>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># We don&#x27;t know which one has higher yield, because we don&#x27;t know their population mean. So we use two-tailed test.</span></span><br><span class="line"><span class="comment"># H0:μ1 = μ2, HA:μ1 ≠ μ2</span></span><br><span class="line">n1 <span class="operator">&lt;-</span> 55 <span class="comment"># Sample size of the first variety</span></span><br><span class="line">n2 <span class="operator">&lt;-</span> 107 <span class="comment"># Sample size of the second variety</span></span><br><span class="line">x_bar_1 <span class="operator">&lt;-</span> 95.4 <span class="comment"># The mean of the first variety</span></span><br><span class="line">x_bar_2 <span class="operator">&lt;-</span> 77.6 <span class="comment"># The mean of the second variety</span></span><br><span class="line">var_1 <span class="operator">&lt;-</span> 936.36 <span class="comment"># The variance of the first variety</span></span><br><span class="line">var_2 <span class="operator">&lt;-</span> 800.89 <span class="comment"># The variance of the second variety</span></span><br><span class="line"></span><br><span class="line">s <span class="operator">&lt;-</span> <span class="built_in">sqrt</span><span class="punctuation">(</span>var_1<span class="operator">/</span>n1 <span class="operator">+</span> var_2<span class="operator">/</span>n2<span class="punctuation">)</span></span><br><span class="line">u <span class="operator">&lt;-</span> <span class="punctuation">(</span>x_bar_1 <span class="operator">-</span> x_bar_2<span class="punctuation">)</span><span class="operator">/</span>s</span><br><span class="line">u <span class="comment"># u = 3.595433</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Significance level α=0.01, In two-sided test, one side is 0.995</span></span><br><span class="line">u_0.01 <span class="operator">&lt;-</span> qnorm<span class="punctuation">(</span><span class="number">0.995</span><span class="punctuation">)</span></span><br><span class="line">u_0.01 <span class="comment"># u_0.01 = 2.575829</span></span><br><span class="line"><span class="comment"># u &gt; u_0.01, the null hypothesis was rejected and the alternative hypothesis was accepted, that is, the yield of the two varieties was significantly different.</span></span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -397,7 +417,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-4-Statistical-inference"><span class="nav-number">1.</span> <span class="nav-text">Chapter 4 Statistical inference</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Hypothesis-testing"><span class="nav-number">1.1.</span> <span class="nav-text">4.1 Hypothesis testing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-1-Steps-of-hypothesis-testing"><span class="nav-number">1.1.1.</span> <span class="nav-text">4.1.1 Steps of hypothesis testing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-2-Two-Tailed-vs-One-Tailed-Test"><span class="nav-number">1.1.2.</span> <span class="nav-text">4.1.2 Two-Tailed vs. One-Tailed Test</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-3-Type-I-amp-Type-II-Errors"><span class="nav-number">1.1.3.</span> <span class="nav-text">4.1.3 Type I &amp; Type II Errors</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-Hypothesis-Test-for-Mean"><span class="nav-number">1.2.</span> <span class="nav-text">4.2 Hypothesis Test for Mean</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-1-Hypothesis-Test-for-a-Mean"><span class="nav-number">1.2.1.</span> <span class="nav-text">4.2.1 Hypothesis Test for a Mean</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-4-Statistical-inference"><span class="nav-number">1.</span> <span class="nav-text">Chapter 4 Statistical inference</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Hypothesis-testing"><span class="nav-number">1.1.</span> <span class="nav-text">4.1 Hypothesis testing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-1-Steps-of-hypothesis-testing"><span class="nav-number">1.1.1.</span> <span class="nav-text">4.1.1 Steps of hypothesis testing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-2-Two-Tailed-vs-One-Tailed-Test"><span class="nav-number">1.1.2.</span> <span class="nav-text">4.1.2 Two-Tailed vs. One-Tailed Test</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-3-Type-I-amp-Type-II-Errors"><span class="nav-number">1.1.3.</span> <span class="nav-text">4.1.3 Type I &amp; Type II Errors</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-Hypothesis-Test-for-Mean"><span class="nav-number">1.2.</span> <span class="nav-text">4.2 Hypothesis Test for Mean</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-1-Hypothesis-Test-for-a-Mean"><span class="nav-number">1.2.1.</span> <span class="nav-text">4.2.1 Hypothesis Test for a Mean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-2-Hypothesis-test-for-difference-between-two-means"><span class="nav-number">1.2.2.</span> <span class="nav-text">4.2.2 Hypothesis test for difference between two means</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
