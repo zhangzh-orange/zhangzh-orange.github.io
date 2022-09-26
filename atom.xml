@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-26T03:26:12.270Z</updated>
+  <updated>2022-09-26T03:33:38.671Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,15 +21,16 @@
     <link href="http://example.com/2022/09/26/Knowledge-graph-embedding-for-DTIs-prediction/"/>
     <id>http://example.com/2022/09/26/Knowledge-graph-embedding-for-DTIs-prediction/</id>
     <published>2022-09-26T02:53:19.000Z</published>
-    <updated>2022-09-26T03:26:12.270Z</updated>
+    <updated>2022-09-26T03:33:38.671Z</updated>
     
-    <content type="html"><![CDATA[<p>![slide1](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide1.png)</p><p>![slide2](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide2.png)</p><p>![slide3](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide3.png)</p><p>![slide4](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide4.png)</p><p>![slide5](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide5.png)</p><p>![slide6](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide6.png)</p><p>![slide7](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide7.png)</p><p>![slide8](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide8.png)</p><p>![slide9](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide9.png)</p><p>![slide10](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide10.png)</p><p>![slide11](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide11.png)</p><p>![slide12](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide12.png)</p><p>![slide13](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide13.png)</p><p>![slide14](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide14.png)</p><p>![slide15](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide15.png)</p><p>![slide16](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide16.png)</p><p>![slide17](&#x2F;images&#x2F;Knowledge Graph Embedding for DTIs Prediction&#x2F;slide17.png)</p><p>Reference: </p><p>​Mohamed, S.K., Nováček, V. and Nounu, A., 2020. Discovering protein drug targets using knowledge graph embeddings. Bioinformatics, 36(2), pp.603-610.</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/images/ppt/KGE20220926/slide1.png" alt="slide1"></p><p><img src="/images/ppt/KGE20220926/slide2.png" alt="slide2"></p><p><img src="/images/ppt/KGE20220926/slide3.png" alt="slide3"></p><p><img src="/images/ppt/KGE20220926/slide4.png" alt="slide4"></p><p><img src="/images/ppt/KGE20220926/slide5.png" alt="slide5"></p><p><img src="/images/ppt/KGE20220926/slide6.png" alt="slide6"></p><p><img src="/images/ppt/KGE20220926/slide7.png" alt="slide7"></p><p><img src="/images/ppt/KGE20220926/slide8.png" alt="slide8"></p><p><img src="/images/ppt/KGE20220926/slide9.png" alt="slide9"></p><p><img src="/images/ppt/KGE20220926/slide10.png" alt="slide10"></p><p><img src="/images/ppt/KGE20220926/slide11.png" alt="slide11"></p><p><img src="/images/ppt/KGE20220926/slide12.png" alt="slide12"></p><p><img src="/images/ppt/KGE20220926/slide13.png" alt="slide13"></p><p><img src="/images/ppt/KGE20220926/slide14.png" alt="slide14"></p><p><img src="/images/ppt/KGE20220926/slide15.png" alt="slide15"></p><p><img src="/images/ppt/KGE20220926/slide16.png" alt="slide16"></p><p><img src="/images/ppt/KGE20220926/slide17.png" alt="slide17"></p><p>Reference: </p><p>​Mohamed, S.K., Nováček, V. and Nounu, A., 2020. Discovering protein drug targets using knowledge graph embeddings. Bioinformatics, 36(2), pp.603-610.</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;![slide1](&amp;#x2F;images&amp;#x2F;Knowledge Graph Embedding for DTIs Prediction&amp;#x2F;slide1.png)&lt;/p&gt;
-&lt;p&gt;![slide2](&amp;#x2F;images&amp;#x2F;Knowledge G</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/ppt/KGE20220926/slide1.png&quot; alt=&quot;slide1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ppt/KGE20220926/slide2.png&quot; alt=&quot;slide2&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;im</summary>
       
     
     
