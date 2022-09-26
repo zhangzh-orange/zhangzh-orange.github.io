@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-26T08:43:32.172Z</updated>
+  <updated>2022-09-26T08:55:41.190Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ECNet is an evolutionary context-integrated deep learning framework for protein engineering</title>
+    <link href="http://example.com/2022/09/26/ECNet-is-an-evolutionary-context-integrated-deep-learning-framework-for-protein-engineering/"/>
+    <id>http://example.com/2022/09/26/ECNet-is-an-evolutionary-context-integrated-deep-learning-framework-for-protein-engineering/</id>
+    <published>2022-09-26T08:53:34.000Z</published>
+    <updated>2022-09-26T08:55:41.190Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/ppt/ECNet20220926/slide1.png" alt="slide1"></p><p><img src="/images/ppt/ECNet20220926/slide2.png" alt="slide2"></p><p><img src="/images/ppt/ECNet20220926/slide3.png" alt="slide3"></p><p><img src="/images/ppt/ECNet20220926/slide4.png" alt="slide4"></p><p><img src="/images/ppt/ECNet20220926/slide5.png" alt="slide5"></p><p><img src="/images/ppt/ECNet20220926/slide6.png" alt="slide6"></p><p><img src="/images/ppt/ECNet20220926/slide7.png" alt="slide7"></p><p><img src="/images/ppt/ECNet20220926/slide8.png" alt="slide8"></p><p><img src="/images/ppt/ECNet20220926/slide9.png" alt="slide9"></p><p><img src="/images/ppt/ECNet20220926/slide10.png" alt="slide10"></p><p><img src="/images/ppt/ECNet20220926/slide11.png" alt="slide11"></p><p><img src="/images/ppt/ECNet20220926/slide12.png" alt="slide12"></p><p><img src="/images/ppt/ECNet20220926/slide13.png" alt="slide13"></p><p><img src="/images/ppt/ECNet20220926/slide14.png" alt="slide14"></p><p><img src="/images/ppt/ECNet20220926/slide15.png" alt="slide15"></p><p><img src="/images/ppt/ECNet20220926/slide16.png" alt="slide16"></p><p><img src="/images/ppt/ECNet20220926/slide17.png" alt="slide17"></p><p><img src="/images/ppt/ECNet20220926/slide18.png" alt="slide18"></p><p><img src="/images/ppt/ECNet20220926/slide19.png" alt="slide19"></p><p><img src="/images/ppt/ECNet20220926/slide20.png" alt="slide20"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/ppt/ECNet20220926/slide1.png&quot; alt=&quot;slide1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ppt/ECNet20220926/slide2.png&quot; alt=&quot;slide2&quot;&gt;&lt;/p&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>MultiDTI</title>
