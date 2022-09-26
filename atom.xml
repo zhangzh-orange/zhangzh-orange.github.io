@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-26T07:43:43.546Z</updated>
+  <updated>2022-09-26T07:55:49.119Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PPTs of paper reading</title>
+    <link href="http://example.com/2022/09/26/PPTs-of-paper-reading/"/>
+    <id>http://example.com/2022/09/26/PPTs-of-paper-reading/</id>
+    <published>2022-09-26T07:49:35.000Z</published>
+    <updated>2022-09-26T07:55:49.119Z</updated>
+    
+    <content type="html"><![CDATA[<p>The following is my PPT summarizing some papers of my field, you can click the hyperlink to watch:</p><ol><li><p><a href="https://zhangzh-orange.github.io/2022/09/26/Knowledge-graph-embedding-for-DTIs-prediction/">Knowledge graph embedding for DTIs prediction</a> </p><p>Original article: <a href="https://doi.org/10.1093/bioinformatics/btz600">https://doi.org/10.1093/bioinformatics/btz600</a></p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;The following is my PPT summarizing some papers of my field, you can click the hyperlink to watch:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://zhang</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Knowledge graph embedding for DTIs prediction</title>
