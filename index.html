@@ -183,7 +183,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-09-26 16:53:34 / Modified: 16:55:41" itemprop="dateCreated datePublished" datetime="2022-09-26T16:53:34+08:00">2022-09-26</time>
+              <time title="Created: 2022-09-26 16:53:34 / Modified: 16:59:20" itemprop="dateCreated datePublished" datetime="2022-09-26T16:53:34+08:00">2022-09-26</time>
             </span>
 
           
@@ -199,21 +199,92 @@
       
           <p><img src="/images/ppt/ECNet20220926/slide1.png" alt="slide1"></p>
 <p><img src="/images/ppt/ECNet20220926/slide2.png" alt="slide2"></p>
+<p>Today I would like to introduce an article on protein design published by UIUC in Nature Communication. In this paper, the author designed a model, ECNet, which combined local evolutionary information with global semantic information to predict protein function. Compared with existing machine learning algorithms, the model showed more accurate results on about 50 deep mutational scanning (DMS) datasets and random mutation datasets.</p>
 <p><img src="/images/ppt/ECNet20220926/slide3.png" alt="slide3"></p>
+<p>Before we get to this article, let me give you some background.</p>
+<p>The first is directed evolution, which the model hopes to address. </p>
+<p>As the name suggests, it is a strategy to improve biomolecules towards specific goals. </p>
+<p>Directed evolution in the lab mimics biological evolution in nature, to obtain more active proteins.</p>
+<p>The most active mutation in each round will be the starting point of the next round (parental sequence of the next round). </p>
+<p>The task of computer-assisted directed evolution is to help narrow the range of mutations at each step of the process, thus achieving better results with less cost and time. </p>
+<p>Therefore, our model must be able to distinguish the quantitative function levels of highly correlated sequences, i.e. in a round of directed evolution, our model needs to predict the protein fitness of a sequence that differs by one or few amino acids from the parent sequence.</p>
 <p><img src="/images/ppt/ECNet20220926/slide4.png" alt="slide4"></p>
+<p>Deep mutation scanning is a method for simultaneous assessment of fitness for large-scale protein variants using high-throughput DNA sequencing.</p>
+<p> First of all, we need to construct a protein mutation library, and each genotype is associated with a protein mutation. </p>
+<p>The fitness of the protein was screened by environment limits. Variants with high activity increase in frequency, whereas variants with low activity decrease in frequency.</p>
+<p> Finally, the frequency of each mutation before and after culture was measured by high-throughput DNA sequencing technology, to reflect the protein fitness.</p>
+<p>Reference:</p>
+<p>Fowler, D., Fields, S. Deep mutational scanning: a new style of protein science. <em>Nat Methods</em> <strong>11,</strong> 801–807 (2014). <a target="_blank" rel="noopener" href="https://doi.org/10.1038/nmeth.3027">https://doi.org/10.1038/nmeth.3027</a></p>
 <p><img src="/images/ppt/ECNet20220926/slide5.png" alt="slide5"></p>
+<p>The Markov random field is a graph model of joint probability distribution, in which nodes represent random variables, and edges represent the dependencies between random variables. </p>
+<p>It has three properties, pairwise Markov, local Markov, and global Markov.</p>
+<p> These three properties are equivalent and can be simply described as: the properties of a node in an undirected graph are only related to its neighbour nodes and have nothing to do with other non-neighboring nodes. </p>
+<p>As shown in the figure on the right, given the grey nodes, the black node is conditionally independent of all other nodes. </p>
+<p>In this paper, a simplified form of conditional random field is used, which combines the transfer function and the state function, p (x) is the distribution of the whole random field, and z is the normalization factor to ensure that the sum of the distribution is 1. </p>
+<p>According to Hammersley-Clifford theorem, this function and the three properties of Markov random fields can be deduced from each other, that is to say, we can use this function to represent Markov random fields.</p>
 <p><img src="/images/ppt/ECNet20220926/slide6.png" alt="slide6"></p>
+<p>Multiple sequence alignment (MSA) is the process or the result of sequence alignment of three or more biological sequences. </p>
+<p>From the MSA, sequence homology and evolutionary relationships can be inferred.</p>
+<p> In this paper, Markov random fields are used to model the amino acid coevolution relationship of a specific site in a protein sequence. </p>
+<p>L (e) is the markov random fields’ formula for the probability of generating the protein sequence. </p>
+<p>The optimization goal is to maximize the function in the current sequence group by adjusting function parameters. </p>
+<p>To obtain coevolutionary relationships e_ 𝑖 𝑗 based on maximum likelihood. </p>
+<p>After obtaining the coevolutionary relationship e_ 𝑖 𝑗 of each position in sequence L, it was taken as the representation of protein. </p>
+<p>The shape is L* (L+1). </p>
+<p>Due to the varying lengths of proteins and the fact that protein lengths were long but data from the protein Fitness training set was limited, overfitting was easy to occur. So the author used the linear layer of the neural network to reduce its dimension and compress it to a d-dimensional vector as local evolution representation.</p>
 <p><img src="/images/ppt/ECNet20220926/slide7.png" alt="slide7"></p>
+<p>Before introducing this article’s model, let’s take a quick look at the previous work.</p>
+<p>Evmutation, DeepSequence and Autoregressive also assumed that there were hidden context relationships in the sequence, rather than only changes in amino acids at mutant sites.</p>
+<p>Evmutation also used markov random fields to model the hidden relationships of amino acids in the sequence, while DeepSequence used VAE to model the hidden relationships.</p>
+<p>In regressive model, the goal is to predict the y value corresponding to x, while Autoregressive model is to predict the next x of the current sequence.</p>
 <p><img src="/images/ppt/ECNet20220926/slide8.png" alt="slide8"></p>
+<p>TAPE pretrained the proteins using methods such as Transfomer, while UniRep modeled the sequences using LSTM.</p>
 <p><img src="/images/ppt/ECNet20220926/slide9.png" alt="slide9"></p>
+<p>Yang et al.’s model used n-Gram segmentation of protein as input, trained by the DOC2VEC model, and finally obtained the final output by Gaussian process regression.</p>
+<p>The Envision Model was built on the SGBT model, and the final results were predicted through different feature branches.</p>
+<p> The importance of various features is shown in the right figure (WT &#x3D; wild type, MT &#x3D; mutant).</p>
+<p>The above models can either obtain the co-evolution information of proteins through MSA (called local information in this paper), or obtain the semantic information of amino acids in the whole protein through large-scale protein training (called global information in this paper).</p>
 <p><img src="/images/ppt/ECNet20220926/slide10.png" alt="slide10"></p>
+<p>A reasonable thinking is whether it would be better if we combine them.</p>
+<p>Therefore, in this paper, local coevolution information and global semantic information are integrated to predict protein fitness. Compared with previous methods, there is some improvement in most data sets.</p>
 <p><img src="/images/ppt/ECNet20220926/slide11.png" alt="slide11"></p>
+<p>This is the comparison chart with Yang et al. ‘s model and Envision Model. AUROC is used to evaluate the comparison with Envision Model.</p>
 <p><img src="/images/ppt/ECNet20220926/slide12.png" alt="slide12"></p>
+<p>Then, I want to talk about the whole idea of how this model is built.</p>
+<p>Mutations in the protein sequence affect fitness in an independent way, called epistasis.</p>
+<p>In previous studies, it was found that epistasis interactions of protein amino acids could be used to infer protein contact maps and protein structures. </p>
+<p>Therefore, the authors hypothesized that this epistatic effect could also be used to predict protein fitness.</p>
+<p>The author used Markov random fields to model the correlation of amino acid residues in the WW domain, and found that the correlation between amino acid residues was related to protein fitness, and the spearman coefficient was 0.35.</p>
+<p>The correlation was more obvious when the protein had more homologous sequences. The number of homologous sequences directly affects the accuracy of the Markov random field model, that is, the accuracy of prediction of residue correlation, indicating that the correlation between residues is indeed related to protein fitness.</p>
 <p><img src="/images/ppt/ECNet20220926/slide13.png" alt="slide13"></p>
+<p>The overall model framework is shown in the figure. </p>
+<p>Firstly, a language model and a direct coupling model are respectively used to extract global semantic features and co-evolution features of local residues. </p>
+<p>The Language Model is the TAPE pre-training model. The Direct Coupling Model is a Markov random field model.</p>
+<p> Then, the representations obtained by the two are as the input of the deep learning model.</p>
+<p> The backbone of the deep learning model is a LSTM and two fully connected layers. </p>
+<p>The author used grid search to find hyperparameters. </p>
+<p>In order to improve the robustness and prediction accuracy of the model, three ECNet models are ensemble to get the prediction results.</p>
 <p><img src="/images/ppt/ECNet20220926/slide14.png" alt="slide14"></p>
+<p>In existing studies, protein FITNESS data of single mutants is more than that of double or high-order mutations, so predicting high-order mutations with low-order mutation data is also a problem that will be encountered in practical applications.</p>
+<p>The improvement of ECNet in single mutation is obvious, so if the model can be generalized to double mutation and multi-site mutation well?</p>
+<p>In order to explore this problem, the author designed the following experiments: figure A is, each model used the unit point mutation data as the training set to predict the two-locus mutation; B is the result of using unit point, double and three-site mutations as training set and four-site mutations as test set respectively on the basis of avGFP data.</p>
+<p>C) is The authors conducted experiments and found that top-ranked mutations of their model(n &#x3D;146) (protein fitness of TEM) were significantly better than randomly generated mutations (n &#x3D; 1460).</p>
+<p>Since there may be correlations between mutation sites, the authors designed experiments to see if the model could capture epistatic effects between the sites. The authors assumed that epistatic effect was the difference between double-site mutation and dingle-site mutations. they calculated The spearman correlation between the predicted value of the model and epistatic effect, and found that ECNet was superior to Evmutation and was better than TAPE or at least maintained the same.</p>
 <p><img src="/images/ppt/ECNet20220926/slide15.png" alt="slide15"></p>
+<p>Then the author carried out a real biological experiment to evaluate the effect of the model in practical applications.</p>
+<p>A is a process for predicting enhanced TEM-1 mutant ampicillin resistance using ECNet. Thirty-seven mutant strains that were different from those in the database and ranked high in the predicted results were screened by ECNet or ECNet ensemble Version. There were only single-site mutations and continuous two-site mutations in the training set, but 2-6 site mutations were included in the 37 predictions. Then, the samples were cultured in the media with different concentrations of ampicillin. Wild Type was used as the relative quantitative standard, i.e. the black dotted line in figure B. The proportion of samples with different genotypes was calculated by high-throughput sequencing.</p>
+<p>B is the 6 repeated experiments. The mutants screened by ECNet or ECNet Ensemble Version were compared with the previously reported positive mutants, and the results screened by the ensemble model were even better than the positive control on the whole.</p>
+<p>C is the proportion of protein Fitness higher than the wild type. With the increase of ampicillin concentration, the proportion of protein Fitness higher than the wild type also increased.</p>
 <p><img src="/images/ppt/ECNet20220926/slide16.png" alt="slide16"></p>
+<p>The predictive performance of ECNet is affected by the characteristics of MSA and DMS data. ECNet works better on proteins with more homologous sequences, more conserved sites within proteins, and on data sets with more complete DMS.</p>
+<p>Wittmann et al. evaluated the importance of different protein-coding strategies, training strategies, models, and training set design strategies for machine learning-assisted directed evolutionary results and found that the most important consideration was to reduce the “holes” with the lowest information (i.e. protein mutations with zero or very low protein fitness) in the training data. Because there is less useful information to get from such data.</p>
 <p><img src="/images/ppt/ECNet20220926/slide17.png" alt="slide17"></p>
+<p>Protein fitness actually involves many different tasks, and the characteristics required for different tasks may be different. For specific tasks, we might need to model them respectively, using different features to get better results. This is also mentioned in the ENVISION Model paper.</p>
+<p>In practice, amino acid residues do not necessarily interact in pairs in space. There may be a larger range of local interactions.</p>
+<p>It is difficult to model insertion mutations or deletion mutations. Deletion can be modeled as’ gap characters’, but insertion is difficult to model accurately for Markov random fields indexed by position. The author says that insertion and deletion have been mentioned in other works, but the literature cited uses the autoregression method and uses the previous sequence to model the next one, so it has good compatibility for insertion and deletion.</p>
+<p>There is also a lot to learn from this paper, designing models for application scenarios, such as unit point generalization to multi-site mutation.</p>
+<p> When patterns of change are hard to see with the naked eye, a statistical assessment may be a good option.</p>
+<p>Traditional machine learning algorithms tend to have higher interpretability and fewer parameters. When the training set is small and the performance of deep learning method is not good, we can try to apply traditional statistical learning methods, and some important information may be captured.</p>
 <p><img src="/images/ppt/ECNet20220926/slide18.png" alt="slide18"></p>
 <p><img src="/images/ppt/ECNet20220926/slide19.png" alt="slide19"></p>
 <p><img src="/images/ppt/ECNet20220926/slide20.png" alt="slide20"></p>
@@ -353,7 +424,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-09-26 15:49:35 / Modified: 16:20:21" itemprop="dateCreated datePublished" datetime="2022-09-26T15:49:35+08:00">2022-09-26</time>
+              <time title="Created: 2022-09-26 15:49:35 / Modified: 17:01:34" itemprop="dateCreated datePublished" datetime="2022-09-26T15:49:35+08:00">2022-09-26</time>
             </span>
 
           
@@ -374,6 +445,9 @@
 </li>
 <li><p><strong><a target="_blank" rel="noopener" href="https://zhangzh-orange.github.io/2022/09/26/MultiDTI/">MultiDTI: Drug-target interaction prediction based on multi-modal representation learning to bridge the gap between new chemical entities and known heterogeneous network</a></strong></p>
 <p>Original article: <a target="_blank" rel="noopener" href="https://doi.org/10.1093/bioinformatics/btab473">https://doi.org/10.1093/bioinformatics/btab473</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://zhangzh-orange.github.io/2022/09/26/ECNet-is-an-evolutionary-context-integrated-deep-learning-framework-for-protein-engineering/">ECNet is an evolutionary context-integrated deep learning framework for protein engineering</a></p>
+<p>Original article: <a target="_blank" rel="noopener" href="https://doi.org/10.1038/s41467-021-25976-8">https://doi.org/10.1038/s41467-021-25976-8</a></p>
 </li>
 </ol>
 
