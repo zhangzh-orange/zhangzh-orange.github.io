@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-26T07:55:49.119Z</updated>
+  <updated>2022-09-26T08:15:37.212Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MultiDTI</title>
+    <link href="http://example.com/2022/09/26/MultiDTI/"/>
+    <id>http://example.com/2022/09/26/MultiDTI/</id>
+    <published>2022-09-26T08:04:35.000Z</published>
+    <updated>2022-09-26T08:15:37.212Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/ppt/MultiDTI20220926/slide1.png" alt="slide1"></p><p><img src="/images/ppt/MultiDTI20220926/slide2.png" alt="slide2"></p><p><img src="/images/ppt/MultiDTI20220926/slide3.png" alt="slide3"></p><p><img src="/images/ppt/MultiDTI20220926/slide4.png" alt="slide4"></p><p><img src="/images/ppt/MultiDTI20220926/slide5.png" alt="slide5"></p><p><img src="/images/ppt/MultiDTI20220926/slide6.png" alt="slide6"></p><p><img src="/images/ppt/MultiDTI20220926/slide7.png" alt="slide7"></p><p><img src="/images/ppt/MultiDTI20220926/slide8.png" alt="slide8"></p><p><img src="/images/ppt/MultiDTI20220926/slide9.png" alt="slide9"></p><p><img src="/images/ppt/MultiDTI20220926/slide10.png" alt="slide10"></p><p><img src="/images/ppt/MultiDTI20220926/slide11.png" alt="slide11"></p><p><img src="/images/ppt/MultiDTI20220926/slide12.png" alt="slide12"></p><p><img src="/images/ppt/MultiDTI20220926/slide13.png" alt="slide13"></p><p><img src="/images/ppt/MultiDTI20220926/slide14.png" alt="slide14"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/ppt/MultiDTI20220926/slide1.png&quot; alt=&quot;slide1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ppt/MultiDTI20220926/slide2.png&quot; alt=&quot;slide2&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>PPTs of paper reading</title>
